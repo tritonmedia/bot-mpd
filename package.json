@@ -1,0 +1,15 @@
+{
+  "name": "music-bot",
+  "version": "1.0.0",
+  "description": "Telegram for interacting with music.tritonjs.com",
+  "main": "index.js",
+  "repository": "https://github.com/tritonmedia/bot",
+  "author": "Jared Allard <jaredallard@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "shinojs": "^3.0.1"
+  }
+}
