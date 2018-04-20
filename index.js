@@ -45,7 +45,7 @@ const init = async () => {
    * @param {String} path - File path
    * @param {ShinoJS.Message} msg  - Message Object
    */
-  const queueSong = async (path, msg) => {
+  const queueSong = async (song, msg) => {
     const res = await request.post({
       uri: `${API_URL}/v1/player/queue`,
       body: {
@@ -55,6 +55,8 @@ const init = async () => {
     })
 
     if(!res.success) return error(msg)
+
+    const { title, artist, path } = song
 
     await msg.reply(`OK! I queued ${artist} - ${title} for you!`)
   }
@@ -118,7 +120,7 @@ const init = async () => {
 
     if(data.length === 1) {
       details.setContext('')
-      return queueSong(data[0].path, msg)
+      return queueSong(data[0], msg)
     }
 
     if(data.length > 10) return msg.reply("I'm sorry... but I found too many songs with that name. Please be more specific!")
@@ -149,9 +151,7 @@ const init = async () => {
       return msg.reply("OK! I won't play any of these.")
     }
 
-    const { title, artist, path } = stash[msg.text]
-
-    await queueSong(path, msg)
+    await queueSong(stash[msg.text], msg)
   })
 
   app.register('start', async (adapater, msg) => {
