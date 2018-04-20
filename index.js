@@ -46,6 +46,8 @@ const init = async () => {
    * @param {ShinoJS.Message} msg  - Message Object
    */
   const queueSong = async (song, msg) => {
+    const { title, artist, path } = song
+    
     const res = await request.post({
       uri: `${API_URL}/v1/player/queue`,
       body: {
@@ -55,8 +57,6 @@ const init = async () => {
     })
 
     if(!res.success) return error(msg)
-
-    const { title, artist, path } = song
 
     await msg.reply(`OK! I queued ${artist} - ${title} for you!`)
   }
