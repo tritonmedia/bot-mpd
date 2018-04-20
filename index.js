@@ -162,7 +162,8 @@ const init = async () => {
       "Ask me \"*what's playing*\" to find out the current song,",
       "or even \"*what's next*\" to get a list of songs coming up next.",
       "",
-      "If you have any questions, message [@jaredallard](telegram://jaredallard)."
+      "If you have any questions, message [@jaredallard](telegram://jaredallard).",
+      "🎵 *http://music.tritonjs.com:8000/stream* 🎵"
     ]
     msg.reply(lines.join('\n'))
   })
