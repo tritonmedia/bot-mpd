@@ -8,8 +8,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "node-telegram-bot-api": "^0.30.0",
     "request": "^2.85.0",
     "request-promise": "^4.2.2",
-    "shinojs": "^3.0.1"
+    "request-promise-native": "^1.0.5"
   }
 }
