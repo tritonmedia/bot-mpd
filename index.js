@@ -67,7 +67,7 @@ bot.onText(/^\/start/, (msg, match) => {
   const lines = [
     "Hello! I'm Asada, you can talk to me to interact with shinoradio.",
     "",
-    "To *search* for or *play* a song, just type it!",
+    "To *search* for a song, use /search or try to tell me to search for...",
     "Ask me \"*what's playing*\" to find out the current song,",
     "or even \"*what's next*\" to get a list of songs coming up next.",
     "",
