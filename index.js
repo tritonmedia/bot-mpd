@@ -72,7 +72,7 @@ bot.onText(/^\/start/, (msg, match) => {
     "or even \"*what's next*\" to get a list of songs coming up next.",
     "",
     "If you have any questions, message [@jaredallard](telegram://jaredallard).",
-    "🎵 http://music.tritonjs.com:8000/stream 🎵"
+    "🎵 https://music.tritonjs.com/stream 🎵"
   ]
 
   sendMessage(chatId, lines.join('\n'))
